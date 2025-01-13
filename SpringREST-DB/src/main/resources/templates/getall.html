@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>All Data</title>
+</head>
+<body>
+
+	<h1 style="text-align: center; color: white; background-color: green;">Information of All The Employee</h1>	
+	<center>
+ 	<table border = "2px" style="border-spacing: 10px;">
+		<thead>
+			<tr style="color: white; background-color: red">
+				<th>ID</th>
+				<th>NAME</th>
+				<th>SALARY</th>
+				<th>DESIGNATION</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="l1 : ${showall}">
+				<td th:text="${l1.eId}"></td>
+				<td th:text="${l1.eName}"></td>
+				<td th:text="${l1.eSalary}"></td>
+				<td th:text="${l1.eDesignation}"></td>
+			</tr>
+		</tbody>
+	</table> 
+	</center>
+</body>
+</html>

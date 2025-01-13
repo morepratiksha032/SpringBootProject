@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>Single Data</title>
+</head>
+<body>
+ 
+ 	<center>
+	
+ 	<form th:action="getbyid">
+ 	<div>
+ 		
+ 		<label>Employee Id : </label>
+		<input type="text" name="eId"><br><br>
+ 		
+ 		<button type="submit" style="color: white; background-color: green;">Get</button><br><br>
+ 	
+ 	<table border="2px" style="border-spacing: 10px; border: 2px;">
+		<thead>
+			<tr style="color: white; background-color: red">
+				<th>ID</th>
+				<th>NAME</th>
+				<th>SALARY</th>
+				<th>DESIGNATION</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="l1 : ${infobyid}">
+				<td th:text="${l1.eId}"></td>
+				<td th:text="${l1.eName}"></td>
+				<td th:text="${l1.eSalary}"></td>
+				<td th:text="${l1.eDesignation}"></td>
+			</tr>
+		</tbody>
+		</table>
+ 	<!-- 	<h1 th:text="${infobyid}"></h1> -->
+ 	</div></form></center>
+ 
+		<a th:href="@{insert}">insert</a>
+</body>
+</html>
