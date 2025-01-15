@@ -54,7 +54,7 @@ public class EmployeeController {
 		service.updateEmpInfo(emp, eId);
 		return "update";
 	}
-	
+	 
 	@RequestMapping("/getdatabyid")
 	public String getSingleData() {
 		return "getbyid";
@@ -66,11 +66,6 @@ public class EmployeeController {
 		model.addAttribute("infobyid", emp);
 		return "getbyid";
 	}
-	
-//	@RequestMapping("/showalldata")
-//	public String showAll() {
-//		return "getall";
-//	}
 	
 	@RequestMapping("/showalldata")
 	public String getAllData(Model model,@ModelAttribute Employee emp) {
